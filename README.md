@@ -6,10 +6,38 @@ pip install [패키지명]
 
 # 1. Pandas 
 
-## 1-1. csv파일 불러오기
+### 1-1. csv파일 불러오기
 ```python
 import pandas as pd
 pd.read_csv('example.csv',sep=',')
+```
+### 
+```python
+
+df.columns    #컬럼명
+df.values     #값
+df.isnull().sum()     # Null 값 갯수 확인
+df.describe()   #통계값(숫자값만 처리)
+
+df.drop(['customerID', axis = 1, inplace=True)   #컬럼삭제
+df['TotalCharges'].astype(float)     #데이터 타입 변경
+
+# Boolean indexing검색
+cond = (df['TotalCharges'] == '') | (df['TotalCharges'] == ' ')
+df[cond]
+
+# 데이터 값 변경   ' '을 0으로
+df['TotalChanges'].replace(' ', 0, inplace=True)
+
+df['Churn'].replace(['Yes', 'No'], [1, 0], inplace=True)
+
+# 데이터타입 일괄 변경 예제
+sel_col = df.select_dtypes('object').columns
+
+df[sel_col] = df[sel_col].astype(float)
+df2.info()
+
+
 ```
 
 ## 1-2. 결측치 채우기
