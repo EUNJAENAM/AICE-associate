@@ -415,9 +415,16 @@ model.add(Dense(64, activation='relu', input_shape=(col_num,)))
 model.add(Dense(64, activation='relu'))
 model.add(Dense(class_num, activation='softmax'))
 
+# Y값을 One-Hot-Encoding 하지 않은경우
 model.compile(loss='sparse_categorical_crossentropy',
               optimizer='adam',
-              metrics=['accuracy'])      
+              metrics=['accuracy'])  
+              
+# Y값을 One-Hot-Encoding 한 경우
+model.compile(loss='categorical_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])  
+              
 model.summary() 
 
 # 모델 학습
