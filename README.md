@@ -460,6 +460,8 @@ pred = model.predict(X_test)
 y_pred = np.argmax(pred, axis=1)
 # 정확도 80%
 accuracy_score(y_test, y_pred)
+# 정밀도
+precision_acore(y_test, y_pred)
 # 재현율 성능이 좋지 않다
 recall_score(y_test, y_pred)
 # accuracy, recall, precision 성능 한번에 보기
