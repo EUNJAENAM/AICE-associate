@@ -463,6 +463,8 @@ accuracy_score(y_test, y_pred)
 precision_acore(y_test, y_pred)
 # 재현율 성능이 좋지 않다
 recall_score(y_test, y_pred)
+# 정밀도+재현율
+f1.acore(y_test, y_pred)
 # accuracy, recall, precision 성능 한번에 보기
 print(classification_report(y_test, y_pred))
 
