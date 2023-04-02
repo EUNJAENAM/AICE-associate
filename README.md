@@ -457,6 +457,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 from sklearn.metrics import classification_report
 pred = model.predict(X_test)
 y_pred = np.argmax(pred, axis=1)
+#score
+객체.score(X_test, y_text)
 # 정확도 80%
 accuracy_score(y_test, y_pred)
 # 정밀도
