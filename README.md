@@ -38,7 +38,7 @@ df.select_dtypes('number').head(3)
 # 컬럼의 분포 확인
 df['Churn'].value_counts()
 ```
-### Histgeam
+### Seaborn
 ```python
 import seaborn as sns
 
@@ -49,6 +49,7 @@ sns.histplot(data=df, x='TotalCharges')
 sns.kdeplot(data=df, x='TotalCharges', hue='Churn')
 sns.countplot(data=df, x='MultipleLines',  hue='Churn')
 df[['tenure','MonthlyCharges','TotalCharges']].corr()
+
 sns.heatmap(df[['tenure','MonthlyCharges','TotalCharges']].corr(), annot=True)
 sns.boxplot(data=df, x='Churn', y='TotalCharges')
 ```
@@ -157,6 +158,7 @@ print(f1_score(test_y, pred_y))
 ```
 ### 2-4-2 머신러닝 모델 - confusion_matrix를 heatmap으로 출력하기
 ```python
+from sklearn.metrics import confusion_matrix
 data = confusion_matrix(test_y, pred_y)
 
 # seaborn으로  그려보자.
