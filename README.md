@@ -387,6 +387,16 @@ model.fit(X_train, y_train,
           batch_size=10)
 
 ```
+### dropout 설계
+```python
+model = Sequential()
+model.add(Dense(64, activation='relu', input_shape=(39,)))
+model.add(Dropout(0.3))
+model.add(Dense(64, activation='relu'))
+model.add(Dropout(0.3))
+model.add(Dense(1, activation='sigmoid'))
+
+```
 
 ### 4-3. 딥러닝 모델 - 심층신경망 만들기(다중 분류 모델)
 ```python
