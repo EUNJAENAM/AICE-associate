@@ -13,7 +13,7 @@ df.values     #값
 df.isnull().sum()     # Null 값 갯수 확인
 df.describe()   #통계값(숫자값만 처리)
 
-df.drop(['customerID', axis = 1, inplace=True)   #컬럼삭제
+df.drop('customerID', axis = 1, inplace=True)   #컬럼삭제
 df['TotalCharges'].astype(float)     #데이터 타입 변경
 
 # Boolean indexing검색
