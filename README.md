@@ -57,6 +57,7 @@ sns.boxplot(data=df, x='Churn', y='TotalCharges')
 ### 1-2. 결측치 채우기
 ```python
 df.fillna('채울값', inplace=True)
+df['col'] = df['col'].fillna(df['col'].mode()[0])   #최빈값
 ```
 
 ### 1-3. 결측치가 있는 행 삭제하기
