@@ -38,7 +38,7 @@ df.select_dtypes('number').head(3)
 # 컬럼의 분포 확인
 df['Churn'].value_counts()
 
-# ','를 기준으로 뒷부분의 문자열만 취한다.
+# ','를 기준으로 뒷부분의 문자열만 취하고, '.'을 기준으로 앞부분의 문자열만 취한다.
 df['Name'][0].split(',')[1]
 a= df['Name'].str.split(",").str[0]
 a=df['Name'].str.split(",").str[0].tolist()
