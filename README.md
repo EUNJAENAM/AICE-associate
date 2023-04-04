@@ -52,6 +52,22 @@ df[['tenure','MonthlyCharges','TotalCharges']].corr()
 
 sns.heatmap(df[['tenure','MonthlyCharges','TotalCharges']].corr(), annot=True)
 sns.boxplot(data=df, x='Churn', y='TotalCharges')
+
+# 구간별 나눈후 bar chart
+df['Age_cat'] = pd.cut(df['Age'],
+                       # 0~3, 3~7, 7~15, 15~30, 30~60, 60~80 
+                       bins=[0,3,7,15,30,60,80],
+                       include_lowest=True,
+                       labels=['baby','children','teenage', 'young','adult','old'])
+plt.figure(figsize=[14,4])
+plt.subplot(1,3,1)
+sns.barplot(data=df, x='Pclass', y='Survived')
+plt.subplot(132)
+sns.barplot(data=df, x='Age_cat', y='Survived')
+plt.subplot(133)
+sns.barplot(data=df, x='Sex', y='Survived')
+# plt.subplots_adjust(top=1, bottom=0.1, left=0.10, right=1, hspace=0.5, wspace=0.5)
+plt.show()
 ```
 
 ### 1-2. 결측치 채우기
