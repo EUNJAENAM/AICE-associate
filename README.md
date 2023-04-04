@@ -68,6 +68,12 @@ plt.subplot(133)
 sns.barplot(data=df, x='Sex', y='Survived')
 # plt.subplots_adjust(top=1, bottom=0.1, left=0.10, right=1, hspace=0.5, wspace=0.5)
 plt.show()
+
+#--
+f, ax = plt.subplots(1,2, figsize=(12,6)) 
+sns.countplot('Sex', data=df, ax=ax[0])
+sns.countplot('Sex', hue='Survived', data=df, ax=ax[1])
+plt.show()
 ```
 
 ### 1-2. 결측치 채우기
