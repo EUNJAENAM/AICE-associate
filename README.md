@@ -77,8 +77,8 @@ plt.show()
 
 #--
 f, ax = plt.subplots(1,2, figsize=(12,6)) 
-sns.countplot('Sex', data=df, ax=ax[0])
-sns.countplot('Sex', hue='Survived', data=df, ax=ax[1])
+sns.countplot(data=df, x='Sex', ax=ax[0])
+sns.countplot(data=df, x='Sex', hue='Survived', ax=ax[1])
 plt.show()
 ```
 
