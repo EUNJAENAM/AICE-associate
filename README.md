@@ -167,6 +167,12 @@ sns.heatmap(data, annot=True, cmap='Reds')
 plt.xlabel('Predict')
 plt.ylabel('Actual')
 plt.show()
+
+# 상관관계 heatmap
+plt.figure(figsize=(10,10))
+sns.heatmap(df.corr(), annot=True)
+plt.title('Correlation between features')
+plt.show()
 ```
 ### 2-4-3 머신러닝 모델 - classification_report로 성능 확인하기
 ```python
