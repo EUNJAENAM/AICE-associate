@@ -526,7 +526,7 @@ f1.acore(y_test, y_pred)
 print(classification_report(y_test, y_pred))
 
 ```
-### 다중분류시 예측값
+### 다중분류시 예측값 (DNN)
 ```python
 y_pred = np.argmax(pred, axis=1)
 accuracy_score(y_test, y_pred)
