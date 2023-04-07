@@ -241,6 +241,7 @@ pred_y = model.predict(test_x)
 
 ### 2-7. 머신러닝 모델 - 분류 : DecisionTree
 ```python
+from sklearn.tree import DecisionTreeRegressor    #회귀
 from sklearn.tree import DecisionTreeClassifier
 
 model = DecisionTreeClassifier(randon_state=42)
