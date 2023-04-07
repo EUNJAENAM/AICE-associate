@@ -178,7 +178,6 @@ pred_y = model.predict(test_x)
 ```python
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-import seaborn as sns
 
 print(accuracy_score(test_y, pred_y))
 print(precision_score(test_y, pred_y))
@@ -282,7 +281,7 @@ model.fit(train_x, train_y)
 pred_y = model.predict(test_x)
 ```
 
-### 2-11. 머신러닝 모델 - 회귀 : LinearRegression
+### 2-11. 머신러닝 모델 - 선형회귀 : LinearRegression
 ```python
 from sklearn.linear_model import LinearRegression
 
