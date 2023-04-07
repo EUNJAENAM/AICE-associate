@@ -177,7 +177,6 @@ pred_y = model.predict(test_x)
 ```
 ### 2-4-1 머신러닝 모델 - 성능 측정(accuracy, precision, recall, f1)
 ```python
-from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
 print(accuracy_score(test_y, pred_y))
