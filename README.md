@@ -58,6 +58,7 @@ df[['tenure','MonthlyCharges','TotalCharges']].corr()
 
 sns.heatmap(df[['tenure','MonthlyCharges','TotalCharges']].corr(), annot=True)
 sns.boxplot(data=df, x='Churn', y='TotalCharges')
+sns.scatterplot(data=df, x='total_bill', y='tip')
 
 # 구간별 나눈후 bar chart
 df['Age_cat'] = pd.cut(df['Age'],
